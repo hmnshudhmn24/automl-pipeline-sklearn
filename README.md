@@ -1,28 +1,53 @@
-# AutoML System with Scikit-learn Pipelines
+# 🤖 AutoML Pipeline with Scikit-learn
 
-This project is an automated machine learning (AutoML) system using Scikit-learn. It handles data preprocessing, model selection, hyperparameter tuning, and includes explainability using SHAP.
+This project builds an **AutoML system** using **Scikit-learn** that automates:
+data preprocessing, model selection, hyperparameter tuning, and model explainability using SHAP.
 
-## Features
+## 📊 Dataset
 
-- Preprocessing with Pipelines (scaling, encoding)
-- Model selection: Logistic Regression, SVM, Random Forest
-- Hyperparameter tuning using GridSearchCV
-- SHAP for model explainability
-- Exports best model as a `.pkl` file
+- Use your own CSV dataset by placing it in the `data/` folder as `data.csv`.
+- Make sure to update the target column name in `main.py`.
 
-## How to Run
+## ⚙️ ML Pipeline
 
-1. Place your dataset in the `data/` folder as `data.csv`
-2. Update `target = 'target_column'` in `src/main.py` to match your dataset
-3. Run the script:
+- **Preprocessing:** Handles numeric & categorical features with scaling and encoding.
+- **Models Evaluated:**
+  - Logistic Regression
+  - Support Vector Machine (SVM)
+  - Random Forest Classifier
+- **Tuning:** Uses `GridSearchCV` to find the best model and hyperparameters.
+
+## 🧠 Explainability
+
+- SHAP (SHapley Additive exPlanations) is used to visualize feature contributions.
+
+## 📦 Requirements
+
+```bash
+pip install pandas numpy scikit-learn shap joblib matplotlib
+```
+
+## 🚀 How to Run
 
 ```bash
 cd src
 python main.py
 ```
 
-4. Check outputs, classification report, and SHAP plots.
+- Outputs include model performance, SHAP summary plot, and saved model file (`best_model.pkl`).
 
-## Requirements
+## 📁 Files
 
-- pandas, numpy, scikit-learn, shap, joblib, matplotlib
+- `src/main.py` — Main training, tuning, and explainability script.
+- `data/data.csv` — Placeholder dataset (replace with your data).
+- `README.md` — Project documentation.
+
+## 🏁 Output
+
+- Best model printed with evaluation metrics (accuracy, precision, recall, F1-score).
+- SHAP summary plot saved/displayed for feature insights.
+- Model saved in `model/` folder.
+
+---
+
+🔍 Made with ❤️ using Scikit-learn, SHAP, and Python.
