@@ -47,7 +47,3 @@ python main.py
 - Best model printed with evaluation metrics (accuracy, precision, recall, F1-score).
 - SHAP summary plot saved/displayed for feature insights.
 - Model saved in `model/` folder.
-
----
-
-🔍 Made with ❤️ using Scikit-learn, SHAP, and Python.
